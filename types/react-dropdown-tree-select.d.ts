@@ -39,7 +39,7 @@ declare module 'react-dropdown-tree-select' {
      *
      * Calls the handler with the current node object and all selected nodes (if any)
      */
-    onChange?: (currentNode: TreeNode, selectedNodes: TreeNode[]) => void
+    onChange?: (currentNode: TreeNode, selectedNodes: TreeNode[], id: string) => void
     /**  Fired on click of the action */
     onAction?: (currentNode: TreeNode, currentAction: NodeAction) => void
     /** Fires when a node is expanded or collapsed.
