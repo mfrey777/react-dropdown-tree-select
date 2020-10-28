@@ -190,6 +190,11 @@ class DropdownTreeSelect extends Component {
     }
 
     const tree = searchModeOn ? this.treeManager.matchTree : this.treeManager.tree
+    console.log('tree:')
+    console.log(tree)
+    console.log('this.treeManager:')
+    console.log(this.treeManager)
+
     const nextState = {
       tree,
       tags,
