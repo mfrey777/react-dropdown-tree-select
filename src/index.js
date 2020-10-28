@@ -194,6 +194,10 @@ class DropdownTreeSelect extends Component {
     console.log(tree)
     console.log('this.treeManager:')
     console.log(this.treeManager)
+    console.log('this.props:')
+    console.log(this.props)
+    console.log('this.state:')
+    console.log(this.state)
 
     const nextState = {
       tree,
