@@ -176,6 +176,7 @@ class DropdownTreeSelect extends Component {
 
   onCheckboxChange = (id, checked, callback) => {
     const { mode, keepOpenOnSelect, clearSearchOnChange } = this.props
+    const tree_id = this.props['id']
     const { currentFocus, searchModeOn } = this.state
     this.treeManager.setNodeCheckedState(id, checked)
     let tags = this.treeManager.tags
@@ -190,14 +191,6 @@ class DropdownTreeSelect extends Component {
     }
 
     const tree = searchModeOn ? this.treeManager.matchTree : this.treeManager.tree
-    console.log('tree:')
-    console.log(tree)
-    console.log('this.treeManager:')
-    console.log(this.treeManager)
-    console.log('this.props:')
-    console.log(this.props)
-    console.log('this.state:')
-    console.log(this.state)
 
     const nextState = {
       tree,
@@ -218,7 +211,7 @@ class DropdownTreeSelect extends Component {
     this.setState(nextState, () => {
       callback && callback(tags)
     })
-    this.props.onChange(node, tags, 'tree id')
+    this.props.onChange(node, tags, tree_id)
   }
 
   onAction = (nodeId, action) => {
