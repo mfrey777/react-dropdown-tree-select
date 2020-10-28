@@ -209,7 +209,7 @@ class DropdownTreeSelect extends Component {
     this.setState(nextState, () => {
       callback && callback(tags)
     })
-    this.props.onChange(node, tags, id)
+    this.props.onChange(node, tags, 'tree id')
   }
 
   onAction = (nodeId, action) => {
